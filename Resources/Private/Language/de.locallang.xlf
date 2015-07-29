@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-07-29T19:42:31Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="constants.customsubcategory.advancedSettings" approved="yes">
+			<source>Advanced settings</source>
+			<target>Advanced settings</target>
+		</trans-unit>
+		<trans-unit id="constants.customsubcategory.settings" approved="yes">
+			<source>Settings</source>
+			<target>Settings</target>
+		</trans-unit>
+		<trans-unit id="jquery.cookiebar.acceptText" approved="yes">
+			<source>Got it</source>
+			<target>OK</target>
+		</trans-unit>
+		<trans-unit id="jquery.cookiebar.declineText" approved="yes">
+			<source>Disable Cookies</source>
+			<target>Cookies deaktivieren</target>
+		</trans-unit>
+		<trans-unit id="jquery.cookiebar.message" approved="yes">
+			<source>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners.</source>
+			<target>Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anbieten zu können und die Zugriffe auf unsere Website zu analysieren. Außerdem geben wir Informationen zu Ihrer Nutzung unserer Website an unsere Partner für soziale Medien, Werbung und Analysen weiter.</target>
+		</trans-unit>
+		<trans-unit id="jquery.cookiebar.policyText" approved="yes">
+			<source>See details</source>
+			<target>Details ansehen</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

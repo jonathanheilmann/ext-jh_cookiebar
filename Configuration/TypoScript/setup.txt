@@ -1,0 +1,56 @@
+tmp.tx_jhcookiebar_policyUrl = TEXT
+tmp.tx_jhcookiebar_policyUrl {
+	typolink.parameter = {$plugin.tx_jhcookiebar.settings.policyUrl}
+	typolink.returnLast = url
+}
+tmp.tx_jhcookiebar_domain = TEXT
+tmp.tx_jhcookiebar_domain {
+	data = getIndpEnv:TYPO3_REQUEST_HOST
+	rawUrlEncode = 1
+}
+tmp.tx_jhcookiebar_referrer = TEXT
+tmp.tx_jhcookiebar_referrer {
+	data = getIndpEnv:TYPO3_REQUEST_HOST
+	rawUrlEncode = 1
+}
+
+plugin.tx_jhcookiebar {
+	setup < page.jsFooterInline
+	setup {
+		# add fluidtemplate
+		1438109824 = FLUIDTEMPLATE
+		1438109824 {
+			file = {$plugin.tx_jhcookiebar.settings.template}
+			settings {
+				acceptButton = {$plugin.tx_jhcookiebar.settings.acceptButton}
+				# declineButton = {$plugin.tx_jhcookiebar.settings.declineButton}
+				policyButton = {$plugin.tx_jhcookiebar.settings.policyButton}
+				autoEnable = {$plugin.tx_jhcookiebar.settings.autoEnable}
+				acceptOnContinue = {$plugin.tx_jhcookiebar.settings.acceptOnContinue}
+				acceptOnScroll = {$plugin.tx_jhcookiebar.settings.acceptOnScroll}
+				acceptAnyClick = {$plugin.tx_jhcookiebar.settings.acceptAnyClick}
+				expireDays = {$plugin.tx_jhcookiebar.settings.expireDays}
+				renewOnVisit = {$plugin.tx_jhcookiebar.settings.renewOnVisit}
+				forceShow = {$plugin.tx_jhcookiebar.settings.forceShow}
+				effect = {$plugin.tx_jhcookiebar.settings.effect}
+				fixed = {$plugin.tx_jhcookiebar.settings.fixed}
+				bottom = {$plugin.tx_jhcookiebar.settings.bottom}
+				zindex = {$plugin.tx_jhcookiebar.settings.zindex}
+			}
+			variables {
+				policyUrl < tmp.tx_jhcookiebar_policyUrl
+				domain < tmp.tx_jhcookiebar_domain
+				referrer < tmp.tx_jhcookiebar_referrer
+			}
+		}
+	}
+}
+page {
+	includeCSS {
+		tx_jhcookiebar_10 = {$plugin.tx_jhcookiebar.settings.css}
+	}
+	includeJSFooterlibs {
+		tx_jhcookiebar_10 = {$plugin.tx_jhcookiebar.settings.js}
+	}
+	jsFooterInline < plugin.tx_jhcookiebar.setup
+}

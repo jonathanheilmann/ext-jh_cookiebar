@@ -1,0 +1,27 @@
+;(function($){
+	$(document).ready(function(){
+		$.cookieBar({
+			message: '<f:translate key="jquery.cookiebar.message" extensionName="JhCookiebar" />',
+			acceptButton: {settings.acceptButton},
+			acceptText: '<f:translate key="jquery.cookiebar.acceptText" extensionName="JhCookiebar" />',
+			declineButton: 0,
+			<f:comment>declineText: '<f:translate key="jquery.cookiebar.declineText" extensionName="JhCookiebar" />',</f:comment>
+			policyButton: {settings.policyButton},
+			policyText: '<f:translate key="jquery.cookiebar.policyText" extensionName="JhCookiebar"/>',
+			policyURL: '{policyUrl}',
+			autoEnable: {settings.autoEnable},
+			acceptOnContinue: {settings.acceptOnContinue},
+			acceptOnScroll: {settings.acceptOnScroll},
+			acceptAnyClick: {settings.acceptAnyClick},
+			expireDays: {settings.expireDays},
+			renewOnVisit: {settings.renewOnVisit},
+			forceShow: {settings.forceShow},
+			effect: '{settings.effect}',
+			fixed: {settings.fixed},
+			bottom: {settings.bottom},
+			zindex: {settings.zindex},
+			domain: '{domain}',
+			referrer: '{referrer}'
+		});
+	});
+})(jQuery);
