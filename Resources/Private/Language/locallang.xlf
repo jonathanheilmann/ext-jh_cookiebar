@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-29T18:48:19Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="constants.customsubcategory.advancedSettings">
+			<source>Advanced settings</source>
+		</trans-unit>
+		<trans-unit id="constants.customsubcategory.settings">
+			<source>Settings</source>
+		</trans-unit>
+		<trans-unit id="jquery.cookiebar.acceptText">
+			<source>Got it</source>
+		</trans-unit>
+		<trans-unit id="jquery.cookiebar.declineText">
+			<source>Disable Cookies</source>
+		</trans-unit>
+		<trans-unit id="jquery.cookiebar.policyText">
+			<source>See details</source>
+		</trans-unit>
+		<trans-unit id="jquery_cookiebar_message">
+			<source>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners.</source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

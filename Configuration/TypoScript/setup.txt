@@ -1,0 +1,105 @@
+tmp.policyUrl = TEXT
+tmp.policyUrl {
+	typolink.parameter = {$plugin.tx_jhcookiebar.settings.policyUrl}
+	typolink.returnLast = url
+}
+page {
+	includeCSS {
+		tx_jhcookiebar_10 = {$plugin.tx_jhcookiebar.settings.css}
+	}
+	includeJSFooterlibs {
+		tx_jhcookiebar_10 = {$plugin.tx_jhcookiebar.settings.js}
+	}
+	jsFooterInline {
+		1438109824 = COA 
+		1438109824 {
+			wrap = ;(function($){$(document).ready(function(){$.cookieBar({|});});})(jQuery);
+			10 = TEXT
+			10.wrap = message: '|',
+			10.data = LLL:EXT:jh_cookiebar/Resources/Private/Language/locallang.xlf:jquery_cookiebar_message
+			
+			20 = TEXT
+			20.wrap = acceptButton: |,
+			20.value = {$plugin.tx_jhcookiebar.settings.acceptButton}
+			
+			30 = TEXT
+			30.wrap = acceptText: '|',
+			30.data = LLL:EXT:jh_cookiebar/Resources/Private/Language/locallang.xlf:jquery.cookiebar.acceptText
+			
+			40 = TEXT
+			40.wrap = declineButton: |,
+			#40.value = {$plugin.tx_jhcookiebar.settings.declineButton}
+			40.value = false
+			
+			#50 = TEXT
+			#50.wrap = declineText: '|',
+			#50.data = LLL:EXT:jh_cookiebar/Resources/Private/Language/locallang.xlf:jquery.cookiebar.declineText
+			
+			60 = TEXT
+			60.wrap = policyButton: |,
+			60.value = {$plugin.tx_jhcookiebar.settings.policyButton}
+			
+			70 = TEXT
+			70.wrap = policyText: '|',
+			70.data = LLL:EXT:jh_cookiebar/Resources/Private/Language/locallang.xlf:jquery.cookiebar.policyText
+			
+			75 = TEXT
+			75.wrap = policyURL: '|',
+			75.value < tmp.policyUrl
+			
+			80 = TEXT
+			80.wrap = autoEnable: |,
+			80.value = {$plugin.tx_jhcookiebar.settings.autoEnable}
+			
+			90 = TEXT
+			90.wrap = acceptOnContinue: |,
+			90.value = {$plugin.tx_jhcookiebar.settings.acceptOnContinue}
+			
+			110 = TEXT
+			110.wrap = acceptOnScroll: |,
+			110.value = {$plugin.tx_jhcookiebar.settings.acceptOnScroll}
+			
+			120 = TEXT
+			120.wrap = acceptAnyClick: |,
+			120.value = {$plugin.tx_jhcookiebar.settings.acceptAnyClick}
+			
+			130 = TEXT
+			130.wrap = expireDays: |,
+			130.value = {$plugin.tx_jhcookiebar.settings.expireDays}
+			
+			140 = TEXT
+			140.wrap = renewOnVisit: |,
+			140.value = {$plugin.tx_jhcookiebar.settings.renewOnVisit}
+			
+			150 = TEXT
+			150.wrap = forceShow: |,
+			150.value = {$plugin.tx_jhcookiebar.settings.forceShow}
+			
+			160 = TEXT
+			160.wrap = effect: '|',
+			160.value = {$plugin.tx_jhcookiebar.settings.effect}
+			
+			170 = TEXT
+			170.wrap = fixed: |,
+			170.value = {$plugin.tx_jhcookiebar.settings.fixed}
+			
+			180 = TEXT
+			180.wrap = bottom: |,
+			180.value = {$plugin.tx_jhcookiebar.settings.bottom}
+			
+			180 = TEXT
+			180.wrap = zindex: '|',
+			180.value = {$plugin.tx_jhcookiebar.settings.zindex}
+			
+			900 = TEXT
+			900.wrap = domain: '|',
+			900.data = getIndpEnv:TYPO3_REQUEST_HOST
+			900.rawUrlEncode = 1
+			
+			910 = TEXT
+			910.wrap = referrer: '|'
+			910.data = getIndpEnv:TYPO3_REQUEST_HOST
+			910.rawUrlEncode = 1
+		}
+	}
+}
